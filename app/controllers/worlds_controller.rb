@@ -2,6 +2,10 @@ class WorldsController < ApplicationController
   before_action :set_world, only: [:show, :edit, :update, :destroy]
 
   skip_before_action :authenticate_user!, :only => [:show, :index]
+  
+  
+
+  
   # GET /worlds
   # GET /worlds.json
   def index
@@ -11,6 +15,10 @@ class WorldsController < ApplicationController
   # GET /worlds/1
   # GET /worlds/1.json
   def show
+    
+    @user = User.find_by(id: params[:id])
+    @worlds = @user.worlds
+
   end
 
   # GET /worlds/new
