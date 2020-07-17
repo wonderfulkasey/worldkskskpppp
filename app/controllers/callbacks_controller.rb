@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+class CallbacksController < Devise::OmniauthCallbacksController
   # You should configure your model like this:
   # devise :omniauthable, omniauth_providers: [:twitter]
 
   # You should also create an action method in this controller like this:
   def github
     @user = User.from_omniauth(request.env["omniauth.auth"])
-    signin_and_redirect @user
+    sign_in_and_redirect @user
   end
 
   # More info at:
