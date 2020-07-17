@@ -1,6 +1,7 @@
 class WorldsController < ApplicationController
   before_action :set_world, only: [:show, :edit, :update, :destroy]
 
+  skip_before_action :authenticate_user!, :only => [:show, :index]
   # GET /worlds
   # GET /worlds.json
   def index
