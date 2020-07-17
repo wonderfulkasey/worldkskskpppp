@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #root to: ""
   resources :players
   resources :worlds
   resources :characters
