@@ -1,8 +1,7 @@
 class User < ApplicationRecord
 
-  has_many :players
-  has_many :worlds, through: players
-  has_many :characters, through: :players
+  has_many :worlds
+  has_many :characters
 
   validates :email, uniqueness: true
   # Include default devise modules. Others available are:
