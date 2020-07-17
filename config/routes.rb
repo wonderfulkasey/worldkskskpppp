@@ -12,10 +12,8 @@ Rails.application.routes.draw do
   
 
   devise_for :users, controllers: {
-    sessions: 'users/sessions',
-    passwords: 'users/passwords',
-    registrations: 'users/registrations'
-  } 
+    registrations: "registrations" }
+    
 
   devise_scope :user do 
     get 'login', to: 'devise/sessions#new'
