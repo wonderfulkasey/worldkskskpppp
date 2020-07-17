@@ -4,12 +4,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :manage, :all
-  end
-  if user.supervisor_role?
-    can :manage, User
-  end
-
+   
   user ||= User.new # guest user (not logged in)
     
   if user.superadmin_role?
@@ -20,7 +15,8 @@ class Ability
   if user.supervisor_role?
     can :manage, User
   end
-
+end
+end
 
     # Define abilities for the passed in user here. For example:
     #
@@ -48,5 +44,4 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-  end
-end
+ 
