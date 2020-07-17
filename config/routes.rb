@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   end
 
   devise_scope :user do 
-    get 'logout', to: 'devise/sessions#destroy'
+    get 'signout', to: 'devise/sessions#destroy'
   end
 
   devise_scope :user do
