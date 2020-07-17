@@ -18,12 +18,7 @@
   <%= @world.inhabitants %>
 </p>
 
-<% if @world.user == current_user %>
-    <i>Created by you!</i>
-    <strong><%= link_to "Edit World", edit_world_path(@world) %></strong>
-<% else %>
-    <i>Created by <%= @world.user.email %></i>
-<% end %>
+
 
 <%= link_to 'Edit', edit_world_path(@world) %> |
 <%= link_to 'Back', worlds_path %>
