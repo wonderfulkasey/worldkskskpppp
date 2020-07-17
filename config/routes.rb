@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  #root to: ""
+
+  root to: "players#home"
+
   resources :players
   resources :worlds
   resources :characters
