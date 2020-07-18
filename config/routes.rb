@@ -2,12 +2,20 @@ Rails.application.routes.draw do
   
     mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
    # resources :users, only: [:show]
+<<<<<<< HEAD
     #resources :users
+=======
+    resources :users
+>>>>>>> 2b8a38a5d8ef376e94442a83052b4e766c296897
     resources :worlds
     resources :characters
   
 
+<<<<<<< HEAD
    root "worlds#home"
+=======
+   root "users#home"
+>>>>>>> 2b8a38a5d8ef376e94442a83052b4e766c296897
  
   
 
