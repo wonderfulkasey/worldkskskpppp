@@ -22,15 +22,6 @@ ActiveRecord::Schema.define(version: 2020_07_18_025400) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "players", force: :cascade do |t|
-    t.string "name"
-    t.text "worlds"
-    t.text "characters"
-    t.text "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -41,9 +32,6 @@ ActiveRecord::Schema.define(version: 2020_07_18_025400) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "provider"
     t.string "uid"
-    t.boolean "superadmin_role", default: false
-    t.boolean "supervisor_role", default: false
-    t.boolean "user_role", default: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

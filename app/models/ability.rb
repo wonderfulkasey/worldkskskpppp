@@ -4,21 +4,16 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-   
-  user ||= User.new # guest user (not logged in)
-    
-  if user.superadmin_role?
-    can :manage, :all
-    can :access, :rails_admin       # only allow admin users to access Rails Admin
-    can :manage, :dashboard         # allow access to dashboard
- # end
-  elsif user.supervisor_role?
-    can :manage, User
-    
-  else
-    can :read, :all
-  
-  end
+    alias_action :create, :read, :update, :destroy, to: :crud
+  #user ||= User.new # guest user (not logged in)
+    can :read, World, public: true
+    can :read, Character, public: true
+
+    if user.present?
+      can :read, :all
+     # can :crud, [World, Character], user_id: user.id
+
+end
 end
 end
 
