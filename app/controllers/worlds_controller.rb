@@ -16,9 +16,6 @@ class WorldsController < ApplicationController
   # GET /worlds/1.json
   def show
     
-    @user = User.find_by(id: params[:id])
-    @worlds = @user.worlds
-
   end
 
   # GET /worlds/new
@@ -34,6 +31,7 @@ class WorldsController < ApplicationController
   # POST /worlds.json
   def create
     @world = World.new(world_params)
+   # @world.user_id = current_user.id
 
     respond_to do |format|
       if @world.save
