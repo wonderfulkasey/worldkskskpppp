@@ -1,5 +1,5 @@
 class World < ApplicationRecord
-   # belongs_to :user
+    belongs_to :user
 
     def self.search(search)
         if search 
@@ -15,7 +15,7 @@ class World < ApplicationRecord
         end
     end
  
-    
+
 
     validates :name, presence: true, length: { minimum: 2 }
 end

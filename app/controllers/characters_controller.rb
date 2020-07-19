@@ -26,6 +26,7 @@ class CharactersController < ApplicationController
   # POST /characters.json
   def create
     @character = Character.new(character_params)
+    @character.creator_id = current_user.id
 
     respond_to do |format|
       if @character.save

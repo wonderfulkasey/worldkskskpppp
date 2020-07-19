@@ -18,9 +18,7 @@
     <% @worlds.each do |world| %>
       <tr>
         <td><%= world.name %></td>
-        <td><%= world.description %></td>
-        <td><%= world.aesthetic %></td>
-        <td><%= world.inhabitants %></td>
+         <td><%= world.user %></td>
         <td><%= link_to 'Show', world %></td>
          </tr>
     <% end %>

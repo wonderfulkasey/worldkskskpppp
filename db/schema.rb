@@ -18,11 +18,14 @@ ActiveRecord::Schema.define(version: 2020_07_18_025400) do
     t.string "alignment"
     t.string "species"
     t.text "description"
+    t.integer "creator_id"
+    t.integer "world_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "name", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -38,9 +41,9 @@ ActiveRecord::Schema.define(version: 2020_07_18_025400) do
 
   create_table "worlds", force: :cascade do |t|
     t.string "name"
-    t.text "description"
-    t.text "aesthetic"
-    t.text "inhabitants"
+    t.string "description"
+    t.string "aesthetic"
+    t.integer "creator_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
