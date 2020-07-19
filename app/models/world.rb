@@ -11,7 +11,7 @@ class World < ApplicationRecord
         end
         
         else
-            World.all
+           World.all
         end
     end
  

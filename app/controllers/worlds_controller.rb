@@ -6,9 +6,13 @@ class WorldsController < ApplicationController
   
   # GET /worlds
   # GET /worlds.json
-  def index
+def index
+  @worlds = World.all
+end
+
+  def search
     @worlds = World.search(params[:search])
-  
+    
    end
 
   # GET /worlds/1
