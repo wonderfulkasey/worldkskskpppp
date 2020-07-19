@@ -17,7 +17,7 @@ Specs:
     Worlds has_many character_classes through Characters; character_classes has_many Worlds through Characters
 
 - [x] The "through" part of the has_many through includes at least one user submittable attribute, that is to say, some attribute other than its foreign keys that can be submitted by the app's user (attribute_name e.g. ingredients.quantity)  
-    (Character: name, class, alignment, species, description; World: name, description, aesthetic, inhabitants)
+    (Character: name, class, alignment, species, description; World: name, description, aesthetic)
     
 - [x] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)  
     Have validations in user, world, and class models

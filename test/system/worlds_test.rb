@@ -16,8 +16,7 @@ class WorldsTest < ApplicationSystemTestCase
 
     fill_in "Aesthetic", with: @world.aesthetic
     fill_in "Description", with: @world.description
-    fill_in "Inhabitants", with: @world.inhabitants
-    fill_in "Name", with: @world.name
+      fill_in "Name", with: @world.name
     click_on "Create World"
 
     assert_text "World was successfully created"
@@ -30,8 +29,7 @@ class WorldsTest < ApplicationSystemTestCase
 
     fill_in "Aesthetic", with: @world.aesthetic
     fill_in "Description", with: @world.description
-    fill_in "Inhabitants", with: @world.inhabitants
-    fill_in "Name", with: @world.name
+      fill_in "Name", with: @world.name
     click_on "Update World"
 
     assert_text "World was successfully updated"

@@ -81,6 +81,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def world_params
-      params.require(:world).permit(:name, :description, :aesthetic, :inhabitants, :search)
+      params.require(:world).permit(:name, :description, :aesthetic,  :search)
     end
 end

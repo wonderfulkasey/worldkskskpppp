@@ -17,7 +17,7 @@ class WorldsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create world" do
     assert_difference('World.count') do
-      post worlds_url, params: { world: { aesthetic: @world.aesthetic, description: @world.description, inhabitants: @world.inhabitants, name: @world.name } }
+      post worlds_url, params: { world: { aesthetic: @world.aesthetic, description: @world.description, name: @world.name } }
     end
 
     assert_redirected_to world_url(World.last)
@@ -34,7 +34,7 @@ class WorldsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update world" do
-    patch world_url(@world), params: { world: { aesthetic: @world.aesthetic, description: @world.description, inhabitants: @world.inhabitants, name: @world.name } }
+    patch world_url(@world), params: { world: { aesthetic: @world.aesthetic, description: @world.description, name: @world.name } }
     assert_redirected_to world_url(@world)
   end
 
