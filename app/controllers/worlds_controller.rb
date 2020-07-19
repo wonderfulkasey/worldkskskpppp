@@ -2,15 +2,14 @@ class WorldsController < ApplicationController
   before_action :set_world, only: [:show, :edit, :update, :destroy]
 
   skip_before_action :authenticate_user!, :only => [:index]
-  
-  
-
+ 
   
   # GET /worlds
   # GET /worlds.json
   def index
-    @worlds = World.all
-  end
+    @worlds = World.search(params[:search])
+  
+   end
 
   # GET /worlds/1
   # GET /worlds/1.json
@@ -76,6 +75,6 @@ class WorldsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def world_params
-      params.require(:world).permit(:name, :description, :aesthetic, :inhabitants)
+      params.require(:world).permit(:name, :description, :aesthetic, :inhabitants, :search)
     end
 end

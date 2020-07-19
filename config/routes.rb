@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
    root "worlds#home"
  
-  
+   get '/search' => 'worlds#search', :as => 'search_page'
 
   devise_for :users, controllers: {
     registrations: "registrations",

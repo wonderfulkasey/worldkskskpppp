@@ -2,6 +2,20 @@
 
 <h1>Worlds</h1>
 
+<h3>Search Worlds</h3>  
+    <%= form_tag(worlds_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag ("Search")%>
+  <% end %>  
+
+  <% @worlds.each do |world|%>
+  <ul>
+  <li> <%= link_to world.name, %>  </li>
+  <br>
+  </ul>
+  <% end %>
+ 
+
 <table>
   <thead>
     <tr>
@@ -31,3 +45,5 @@
 <br>
 
 <%= link_to 'New World', new_world_path %>
+<br>
+<a href="/search">Or would you rather search?</a>
