@@ -23,7 +23,7 @@ Specs:
     Have validations in user, world, and class models
 
 - [x] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)  
-    Can search characters through either their class, level, or species.
+    Can search characters through either their class, alignment, or species.
 
 - [x] Include signup (how e.g. Devise)  
     using Devise, customized to include name, username, email and password at creation of account 
