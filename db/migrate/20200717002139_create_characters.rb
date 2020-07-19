@@ -6,6 +6,7 @@ class CreateCharacters < ActiveRecord::Migration[6.0]
       t.string :alignment
       t.string :species
       t.text :description
+      
 
       t.timestamps
     end
