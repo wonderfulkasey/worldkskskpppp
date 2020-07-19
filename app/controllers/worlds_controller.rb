@@ -3,6 +3,8 @@ class WorldsController < ApplicationController
 
   skip_before_action :authenticate_user!, :only => [:index]
  
+
+  
   
   # GET /worlds
   # GET /worlds.json
