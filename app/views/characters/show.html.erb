@@ -24,4 +24,6 @@
 </p>
 
 <%= link_to 'Edit', edit_character_path(@character) %> |
+<%= link_to 'Destroy', @character.destroy , data: { confirm: 'Are you sure?' } %>
+
 <%= link_to 'Back', characters_path %>
