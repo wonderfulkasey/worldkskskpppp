@@ -8,7 +8,6 @@ class Ability
   #user ||= User.new # guest user (not logged in)
     can :read, World, public: true
     can :read, Character, public: true
-
     if user.present?
       can :read, :all
      # can :crud, [World, Character], user_id: user.id
