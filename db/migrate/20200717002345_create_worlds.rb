@@ -6,7 +6,7 @@ class CreateWorlds < ActiveRecord::Migration[6.0]
       t.text :description
       t.text :aesthetic
       
-      t.integer :user_id
+      t.integer :user_uid
       
       t.timestamps
     end

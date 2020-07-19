@@ -34,7 +34,7 @@ end
   # POST /worlds.json
   def create
     @world = World.new(world_params)
-    @world.creator_id = current_user.id
+    @world.user_id = current_user.id
 
     respond_to do |format|
       if @world.save
