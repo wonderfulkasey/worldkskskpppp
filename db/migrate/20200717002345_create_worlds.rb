@@ -3,10 +3,10 @@ class CreateWorlds < ActiveRecord::Migration[6.0]
      create_table :worlds do |t|
     
       t.string :name
-      t.string :description
-      t.string :aesthetic
+      t.text :description
+      t.text :aesthetic
       
-      t.integer :creator_id
+      t.integer :user_id
       
       t.timestamps
     end
