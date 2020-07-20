@@ -3,11 +3,9 @@ Rails.application.routes.draw do
     #resources :users
     resources :worlds
     resources :characters
-  
 
    root "worlds#home"
  
-   #get '/search' => 'worlds#search', :as => 'search_page'
    get '/worlds/abc' => 'worlds#abc'
 
   devise_for :users, controllers: {

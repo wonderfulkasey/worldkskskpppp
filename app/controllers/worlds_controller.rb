@@ -9,12 +9,6 @@ class WorldsController < ApplicationController
 def index
   @worlds = World.all
 end
-
-  def search
-    @worlds = World.search(params[:search])
-    
-   end
-
   # GET /worlds/1
   # GET /worlds/1.json
   def show
@@ -70,6 +64,8 @@ end
       format.json { head :no_content }
     end
   end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
