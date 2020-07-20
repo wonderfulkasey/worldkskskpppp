@@ -15,8 +15,7 @@
     <% @characters.each do |character| %>
       <tr>
         <td><%= character.name %></td>
-        <td><%= character.user.email %></td>
-        <td><%= link_to 'Show', character %></td>
+          <td><%= link_to 'Show', character %></td>
       </tr>
     <% end %>
   </tbody>
