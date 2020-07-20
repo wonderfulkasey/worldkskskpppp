@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  
-    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-   # resources :users, only: [:show]
+     resources :users, only: [:show]
     #resources :users
     resources :worlds
     resources :characters
@@ -9,13 +7,13 @@ Rails.application.routes.draw do
 
    root "worlds#home"
  
-   get '/search' => 'worlds#search', :as => 'search_page'
+   #get '/search' => 'worlds#search', :as => 'search_page'
+   get '/worlds/abc' => 'worlds#abc'
 
   devise_for :users, controllers: {
     registrations: "registrations",
     omniauth_callbacks: "callbacks" 
   }
-    
 
   devise_scope :user do 
     get 'login', to: 'devise/sessions#new'
